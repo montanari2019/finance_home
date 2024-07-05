@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native';
 
 import EditScreenInfo from './EditScreenInfo';
+import { THEME } from 'theme/global';
 
 type ScreenContentProps = {
   title: string;
@@ -24,9 +25,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flex: 1,
     justifyContent: 'center',
+    backgroundColor: THEME.COLORS.PURPLE_500,
+  
   },
   separator: {
-    backgroundColor: '#d1d5db',
+    backgroundColor: THEME.COLORS.PURPLE_700,
     height: 1,
     marginVertical: 30,
     width: '80%',
@@ -34,5 +37,6 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     fontWeight: 'bold',
+    color: THEME.COLORS.GRAY_100
   },
 });

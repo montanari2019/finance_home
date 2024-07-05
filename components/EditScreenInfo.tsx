@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native';
+import { THEME } from 'theme/global';
 
 export default function EditScreenInfo({ path }: { path: string }) {
   const title = 'Open up the code for this screen:';
@@ -8,9 +9,7 @@ export default function EditScreenInfo({ path }: { path: string }) {
   return (
     <View style={styles.getStartedContainer}>
       <Text style={styles.getStartedText}>{title}</Text>
-      <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
-        <Text>{path}</Text>
-      </View>
+      
       <Text style={styles.getStartedText}>{description}</Text>
     </View>
   );
@@ -29,6 +28,7 @@ const styles = StyleSheet.create({
     fontSize: 17,
     lineHeight: 24,
     textAlign: 'center',
+    color: THEME.COLORS.GRAY_100,
   },
   helpContainer: {
     alignItems: 'center',
