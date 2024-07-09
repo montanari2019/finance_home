@@ -18,6 +18,8 @@ export const THEME = {
     GRAY_500: '#323238',
     GRAY_600: '#202024',
 
+    WHITE: "#FFFFFF",
+
     DANGER: '#E25858',
   },
 
