@@ -1,12 +1,16 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 
-import { THEME } from 'theme/global';
+import { THEME } from '~/theme/global';
 import { Login } from './Login';
+import { Home } from './Home';
 
 export function ScreenContent() {
   return (
     <View style={styles.container}>
-      <Login />
+     
+        <Home />
+      
+      {/* <Login /> */}
     </View>
   );
 }

@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { THEME } from 'theme/global';
+import { THEME } from '~/theme/global';
 
 export const styled = StyleSheet.create({
   container: {
@@ -12,10 +12,12 @@ export const styled = StyleSheet.create({
   containerIlustratorBottom: {
     bottom: 0,
     position: 'absolute',
+   
   },
   containerIlustratorTop: {
     top: 0,
     right: 0,
+   
     position: 'absolute',
   },
 

@@ -1,13 +1,11 @@
-
 import { StatusBar } from 'expo-status-bar';
-import { ScreenContent } from 'screens/ScreenContent';
+import { ScreenContent } from '~/screens/ScreenContent';
 
 export default function App() {
   return (
     <>
-      <ScreenContent/>
-      <StatusBar style="auto" backgroundColor='transparent' translucent/>
+      <ScreenContent />
+      <StatusBar style="auto" backgroundColor="transparent" />
     </>
   );
 }
- 

@@ -23,7 +23,7 @@ export const THEME = {
     DANGER: '#E25858',
   },
 
-  FONT_SIZE: {
+  SIZES: {
     SIZE_LG: 24,
     SIZE_MD: 20,
     SIZE_SM: 18,
@@ -38,3 +38,11 @@ export const THEME = {
     FONT_BOLD: 700,
   },
 };
+
+
+// export type SizeGlobalTypes = typeof THEME.SIZES
+// export type TypographGlobalTypes = typeof THEME.TYPOGRAPHY
+// export type ColorsGlobalTypes = typeof THEME.COLORS
+// export type ThemeColorKeys = keyof typeof THEME.COLORS;
+
+
