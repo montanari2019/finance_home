@@ -1,5 +1,5 @@
 import { Text, TouchableOpacity, View } from 'react-native';
-import { styled } from '~/styles/login.styles';
+import { styled } from '~/styles/Login/login.styles';
 
 import LogoGoogle from '../assets/logo_google.svg';
 import LogoProject from '../assets/logoProject.svg';

@@ -1,7 +1,7 @@
 import { Text, View } from 'react-native';
 
 import IlustratorTop from '../assets/vector_3.svg';
-import { styled } from '~/styles/header.styles';
+import { styled } from '~/styles/Components/header.styles';
 import { Paragraph } from './paragraph';
 import { THEME } from '~/theme/global';
 import { NotificationBage } from './notification';

@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 import { THEME } from '~/theme/global';
 
 export const styled = StyleSheet.create({
@@ -12,6 +12,18 @@ export const styled = StyleSheet.create({
   containerIlustratorBottom: {
     bottom: 0,
     position: 'absolute',
+    ...Platform.select({
+      ios: {
+        shadowColor: '#000',
+        shadowOffset: { width: 10, height: 0 },
+        shadowOpacity: 0.10,
+        shadowRadius: 3.84,
+      },
+      android: {
+        elevation: 8,
+      }
+
+    }),
    
   },
   containerIlustratorTop: {
@@ -19,6 +31,15 @@ export const styled = StyleSheet.create({
     right: 0,
    
     position: 'absolute',
+    ...Platform.select({
+      ios: {
+        shadowColor: '#000',
+        shadowOffset: { width: -3, height: 10 },
+        shadowOpacity: 0.10,
+        shadowRadius: 3.84,
+      },
+
+    }),
   },
 
   button: {
