@@ -12,13 +12,15 @@ export const styled = StyleSheet.create({
 
   containerMain: {
     marginHorizontal: 16,
+    flex: 1,
   },
 
   mainButton: {
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     marginVertical: 22,
     marginBottom: 35,
+
   },
 
   headerLancamentoSession: {
@@ -26,6 +28,11 @@ export const styled = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    // backgroundColor: THEME.COLORS.DANGER
     // width: 300,
-  },
+  }, 
+
+  containerRelease:{
+
+  }
 });

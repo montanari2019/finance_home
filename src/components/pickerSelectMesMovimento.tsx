@@ -6,25 +6,57 @@ import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
 const dataProps = [
   {
-    label: 'Junho - 2024',
+    label: 'Jan - 24',
+    value: 'janeiro-2024',
+  },
+  {
+    label: 'Fev - 24',
+    value: 'fevereiro-2024',
+  },
+  {
+    label: 'Mar - 24',
+    value: 'março-2024',
+  },
+  {
+    label: 'Abr - 24',
+    value: 'abril-2024',
+  },
+  {
+    label: 'Mai - 24',
+    value: 'maio-2024',
+  },
+  {
+    label: 'Jun - 24',
     value: 'junho-2024',
   },
   {
-    label: 'Julho - 2024',
+    label: 'Jul - 24',
     value: 'julho-2024',
   },
   {
-    label: 'Agosto - 2024',
+    label: 'Ago - 24',
     value: 'agosto-2024',
   },
   {
-    label: 'Setembro - 2024',
+    label: 'Set - 24',
     value: 'setembro-2024',
+  },
+  {
+    label: 'Out - 24',
+    value: 'outubro-2024',
+  },
+  {
+    label: 'Nov - 24',
+    value: 'novembro-2024',
+  },
+  {
+    label: 'Dez - 24',
+    value: 'dezembro-2024',
   },
 ];
 
 type headerType =  typeof dataProps[0]
-export function PickerSelect() {
+export function PickerSelectMesMovimento() {
     return (
       <SelectDropdown
         data={dataProps}
@@ -53,7 +85,7 @@ export function PickerSelect() {
               style={{
                 ...styles.dropdownItemStyle,
                 ...(isSelected && {
-                  backgroundColor: THEME.COLORS.GREEN_500,
+                  backgroundColor: THEME.COLORS.GRAY_600,
                 }),
               }}
             >
@@ -69,11 +101,13 @@ export function PickerSelect() {
   
   const styles = StyleSheet.create({
     dropdownButtonStyle: {
-      width: 200,
+      width: 120,
+      // alignContent: "flex-start",
       gap: 5,
+      justifyContent: "flex-end",
       alignItems: "center",
       
-      height: 32,
+      height: 40,
       backgroundColor: THEME.COLORS.WHITE,
       borderRadius: 12,
       flexDirection: "row",
@@ -90,14 +124,14 @@ export function PickerSelect() {
     },
     dropdownButtonIconStyle: {
       fontSize: 28,
-      marginRight: 8,
+      // marginRight: 8,
     },
     dropdownMenuStyle: {
       backgroundColor: THEME.COLORS.GRAY_500,
       borderRadius: 8,
     },
     dropdownItemStyle: {
-      width: "100%",
+      width: 120,
       flexDirection: "row",
       paddingHorizontal: 12,
       justifyContent: "center",
@@ -111,7 +145,6 @@ export function PickerSelect() {
       color: THEME.COLORS.GRAY_100,
     },
     dropdownItemIconStyle: {
-      fontSize: 28,
-      marginRight: 8,
+      // fontSize: 28,
     },
   });
