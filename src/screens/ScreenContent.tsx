@@ -1,15 +1,17 @@
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
-
+import { Asap_400Regular, Asap_700Bold, useFonts } from '@expo-google-fonts/asap';
 import { THEME } from '~/theme/global';
 import { Login } from './Login';
 import { Home } from './Home';
+import { Routes } from '~/routes';
+import { Loading } from '~/components/loading';
 
 export function ScreenContent() {
+  const [fontsLoaded] = useFonts({ Asap_400Regular, Asap_700Bold });
   return (
     <View style={styles.container}>
-     
-        <Home />
-      
+      {fontsLoaded ? <Routes /> : <Loading textFild />}
+
       {/* <Login /> */}
     </View>
   );

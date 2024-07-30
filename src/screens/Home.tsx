@@ -44,12 +44,17 @@ export function Home() {
           <PickerSelectMesMovimento />
         </View>
 
-
-    <FlatList
-          style={{marginBottom: 16}}
+        <FlatList
+          style={{ marginBottom: 16 }}
           data={releases}
-          ListEmptyComponent={<Paragraph text='Não existe lançamentos' textAlign='center'  fontSize={THEME.SIZES.SIZE_MD}/>}
-          contentContainerStyle={{ gap: 20}}
+          ListEmptyComponent={
+            <Paragraph
+              text="Não existe lançamentos"
+              textAlign="center"
+              fontSize={THEME.SIZES.SIZE_MD}
+            />
+          }
+          contentContainerStyle={{ gap: 20 }}
           showsVerticalScrollIndicator={false}
           renderItem={({ item, index }) => (
             <Release
