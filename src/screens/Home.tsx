@@ -1,6 +1,6 @@
 import { Header } from '~/components/header';
 import { FlatList, SafeAreaView, SectionList, View } from 'react-native';
-import { styled } from '~/styles/Home/home.styles';
+import { styled } from '~/styles/Screens/home.styles';
 import { ButtonDefault } from '~/components/buttonDefault';
 
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
@@ -45,7 +45,7 @@ export function Home() {
         </View>
 
         <FlatList
-          style={{ marginBottom: 16 }}
+          // style={{ marginBottom: 16 }}
           data={releases}
           ListEmptyComponent={
             <Paragraph

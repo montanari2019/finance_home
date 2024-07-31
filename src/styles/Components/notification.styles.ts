@@ -8,6 +8,7 @@ export const styled = StyleSheet.create({
     width: 15,
     height: 15,
     borderRadius: 50,
+    // borderWidth: 1,
     fontSize: THEME.SIZES.SIZE_XXXS - 2,
     textAlign: 'center',
     position: 'absolute',

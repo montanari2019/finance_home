@@ -11,6 +11,7 @@ export const THEME = {
     PURPLE_500: '#6C5AEF',
     PURPLE_700: '#49479D',
 
+    GRAY_10: '#F4F4F4',
     GRAY_50: '#E6E6E6',
     GRAY_100: '#E1E1E6',
     GRAY_200: '#C4C4CC',
