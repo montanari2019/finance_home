@@ -5,10 +5,12 @@ import { Home } from '~/screens/Home';
 import { Groups } from '~/screens/Groups';
 import { User } from '~/screens/User';
 import { THEME } from '~/theme/global';
+import { GroupItem } from '~/screens/GroupItem';
 type AuthRoutesProps = {
   home: undefined;
   user: undefined;
   groups: undefined;
+  groupItem: {id: string};
 };
 
 export type AuthNavigatorRoutesPrivadeProps = BottomTabNavigationProp<AuthRoutesProps>;
@@ -67,6 +69,14 @@ export function BottomTabNavigation() {
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="account" size={iconSize} color={color} />
           ),
+        }}
+      />
+
+      <Screen
+        name='groupItem'
+        component={GroupItem}
+        options={{
+          tabBarButton: () => null
         }}
       />
     </Navigator>

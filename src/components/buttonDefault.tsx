@@ -6,7 +6,7 @@ import { Paragraph } from "./paragraph";
 
 export function ButtonDefault({ title, iconComponent, type, ...resto }:ButtonDefaultModel){
 
-    const backgroundColor = type === "danger"  ? THEME.COLORS.DANGER : THEME.COLORS.GREEN_500
+    const backgroundColor = type === "danger"  ? THEME.COLORS.DANGER_500 : THEME.COLORS.GREEN_500
 
     const styles  = {
         backgroundColor: backgroundColor,

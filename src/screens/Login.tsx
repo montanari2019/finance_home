@@ -1,11 +1,12 @@
 import { Text, TouchableOpacity, View } from 'react-native';
-import { styled } from '~/styles/Login/login.styles';
+
 
 import LogoGoogle from '../assets/logo_google.svg';
 import LogoProject from '../assets/logoProject.svg';
 import IlustratorCenter from '../assets/vector_1.svg';
 import IlustratorBottom from '../assets/vector_2.svg';
 import IlustratorTop from '../assets/vector_3.svg';
+import { styled } from '~/styles/Screens/login.styles';
 
 export function Login() {
   return (

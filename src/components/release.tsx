@@ -10,7 +10,7 @@ export function Release({ date_release, title, type, value, recurrent }: Release
   const subtitle = recurrent ? 'Recorrente' : 'Não recorrente';
 
   const itemStyle = {
-    backgroundColor: type === "output" ?  THEME.COLORS.DANGER : THEME.COLORS.GREEN_500,
+    backgroundColor: type === "output" ?  THEME.COLORS.DANGER_500 : THEME.COLORS.GREEN_500,
     ...styled.icon
   }
   return (

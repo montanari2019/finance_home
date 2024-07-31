@@ -22,7 +22,8 @@ export const THEME = {
 
     WHITE: "#FFFFFF",
 
-    DANGER: '#E25858',
+    DANGER_500: '#E25858',
+    DANGER_900: '#900101',
   },
 
   SIZES: {

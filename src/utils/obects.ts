@@ -1,3 +1,4 @@
+import { GroupsDto } from "~/dto/groups.dtp";
 import { ReleaseModel } from "~/model/release.model";
 
 export const releases: ReleaseModel[]= [
@@ -71,6 +72,89 @@ export const releases: ReleaseModel[]= [
     value: 1000,
     date_release: new Date(2024, 1, 5), // Fevereiro 5, 2024
   },
+];
+
+export const groups: GroupsDto[] = [
+  {
+      id: 'a1b2c3d4',
+      name: 'Group One',
+      date_crate: new Date('2024-01-01'),
+      users: ['Alice', 'Bob'],
+      saldo: 1000,
+      
+  },
+  {
+      id: 'e5f6g7h8',
+      name: 'Group Two',
+      date_crate: new Date('2024-02-01'),
+      users: ['Charlie', 'David',],
+      saldo: -2000,
+      
+  },
+  {
+      id: 'i9j0k1l2',
+      name: 'Group Three',
+      date_crate: new Date('2024-03-01'),
+      users: ['Frank', 'Grace'],
+      saldo: 3000,
+      
+  },
+  {
+      id: 'm3n4o5p6',
+      name: 'Group Four',
+      date_crate: new Date('2024-04-01'),
+      users: ['Hank', 'Ivy',],
+      saldo: 4000,
+      
+  },
+  {
+      id: 'q7r8s9t0',
+      name: 'Group Five',
+      date_crate: new Date('2024-05-01'),
+      users: ['Kathy', 'Leo'],
+      saldo: -5000,
+      
+  },
+  {
+      id: 'u1v2w3x4',
+      name: 'Group Six',
+      date_crate: new Date('2024-06-01'),
+      users: ['Mona', 'Nina', 'Oscar'],
+      saldo: 6000,
+      
+  },
+  {
+      id: 'y5z6a7b8',
+      name: 'Group Seven',
+      date_crate: new Date('2024-07-01'),
+      users: ['Paul', 'Quincy'],
+      saldo: 7000,
+      
+  },
+  {
+      id: 'c9d0e1f2',
+      name: 'Group Eight',
+      date_crate: new Date('2024-08-01'),
+      users: ['Rachel', 'Sam', ],
+      saldo: 8000,
+      
+  },
+  {
+      id: 'g3h4i5j6',
+      name: 'Group Nine',
+      date_crate: new Date('2024-09-01'),
+      users: ['Uma', 'Vince'],
+      saldo: -9000,
+      
+  },
+  {
+      id: 'k7l8m9n0',
+      name: 'Group Ten',
+      date_crate: new Date('2024-10-01'),
+      users: ['Wade', 'Xena', ],
+      saldo: 10000,
+      
+  }
 ];
 
 

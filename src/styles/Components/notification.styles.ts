@@ -4,7 +4,7 @@ import { THEME } from '~/theme/global';
 export const styled = StyleSheet.create({
   bage: {
     color: THEME.COLORS.WHITE,
-    backgroundColor: THEME.COLORS.DANGER,
+    backgroundColor: THEME.COLORS.DANGER_500,
     width: 15,
     height: 15,
     borderRadius: 50,
