@@ -102,16 +102,13 @@ export function PickerSelectMesMovimento() {
   const styles = StyleSheet.create({
     dropdownButtonStyle: {
       width: 120,
-      // alignContent: "flex-start",
       gap: 5,
       justifyContent: "flex-end",
       alignItems: "center",
-      
       height: 40,
-      backgroundColor: THEME.COLORS.WHITE,
+      backgroundColor: 'transparent',
       borderRadius: 12,
       flexDirection: "row",
-      // paddingHorizontal: 12,
     },
     dropdownButtonTxtStyle: {
  

@@ -19,7 +19,7 @@ export const styled = StyleSheet.create({
   },
   containerGradiente: {
     width: '100%',
-    height: 150,
+    height: 160,
     borderRadius: 10,
     elevation: 8,
 
@@ -30,7 +30,7 @@ export const styled = StyleSheet.create({
     paddingHorizontal: 23,
     paddingVertical: 20,
     width: '100%',
-    height: 130,
+    height: 140,
     justifyContent: 'space-between',
   },
 

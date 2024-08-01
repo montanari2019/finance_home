@@ -95,7 +95,7 @@ export const groups: GroupsDto[] = [
       id: 'i9j0k1l2',
       name: 'Group Three',
       date_crate: new Date('2024-03-01'),
-      users: ['Frank', 'Grace'],
+      users: ['Frank', 'Grace', 'Ikaro', 'Taci', 'Joelson'],
       saldo: 3000,
       
   },
@@ -156,6 +156,8 @@ export const groups: GroupsDto[] = [
       
   }
 ];
+
+
 
 
 // export const releases: ReleaseModel[]= []
