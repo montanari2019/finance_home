@@ -61,7 +61,6 @@ export function Groups() {
             })}
           </View> */}
 
-          
 
 
         <FlatList 
