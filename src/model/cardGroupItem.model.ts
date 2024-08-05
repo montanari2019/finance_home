@@ -1,6 +1,7 @@
-import { TouchableOpacityProps } from "react-native";
-import { GroupsDto } from "~/dto/groups.dtp";
 
-export interface CardGroupModel extends TouchableOpacityProps {
+import { GroupsDto } from "~/dto/groups.dtp";
+import { RectButtonProps } from 'react-native-gesture-handler';
+
+export interface CardGroupModel extends RectButtonProps {
     group: GroupsDto
 }

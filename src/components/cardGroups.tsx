@@ -1,10 +1,11 @@
 import { LinearGradient } from 'expo-linear-gradient';
-import { Platform, ScrollView, TouchableOpacity, View } from 'react-native';
+import { Platform, ScrollView,  View } from 'react-native';
 import { styled } from '~/styles/Components/cardGroups.styles';
 import { THEME } from '~/theme/global';
 import { Paragraph } from './paragraph';
 import { formatDateDefault, formatDateMonthAndYear, formatterReais } from '~/utils/format';
 import { CardGroupModel } from '~/model/cardGroupItem.model';
+import { TouchableOpacity, RectButton  } from 'react-native-gesture-handler';
 
 export function CardGroupComponent({ group, ...resto }: CardGroupModel) {
   const colorDanger = [THEME.COLORS.DANGER_500, THEME.COLORS.DANGER_900];
@@ -14,7 +15,7 @@ export function CardGroupComponent({ group, ...resto }: CardGroupModel) {
   const hasMoreUsers = group.users.length > 2;
 
   return (
-    <TouchableOpacity {...resto} style={styled.containerShadow}>
+    <RectButton {...resto} style={styled.containerShadow}>
       <LinearGradient
         colors={group.saldo > 0 ? colorSuccess : colorDanger}
         start={{ x: 0, y: 0 }}
@@ -61,6 +62,6 @@ export function CardGroupComponent({ group, ...resto }: CardGroupModel) {
           </View>
         </View>
       </LinearGradient>
-    </TouchableOpacity>
+    </RectButton>
   );
 }

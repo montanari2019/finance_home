@@ -10,6 +10,8 @@ import { CardGroupComponent } from '~/components/cardGroups';
 import { groups } from '~/utils/obects';
 import { useFocusEffect, useNavigation } from "@react-navigation/native";
 import { AuthNavigatorRoutesPrivadeProps } from '~/routes/bottomTabNavigation';
+import { ButtonSwipeable } from '~/components/Animeted/ButtonSwipeable';
+import { ButtonGroupComponent } from '~/components/buttonGroupComponent';
 
 export function Groups() {
 
@@ -73,16 +75,20 @@ export function Groups() {
               textAlign="center"
             />
           }
-          contentContainerStyle={{paddingBottom: 16, gap: 16}}
+          contentContainerStyle={{paddingVertical: 16, gap: 16}}
           showsVerticalScrollIndicator={false}
           renderItem={({item}) => (
-            <CardGroupComponent 
-              group={item}
-              key={String(item.id)}
-              // onPress={() => console.log('teste component: ', Platform.OS)}
-              onPress={() => handleNavigationToGroupIten(item.id)}
+            <ButtonSwipeable
+              children={<CardGroupComponent 
+                group={item}
+                key={String(item.id)}
+                // onPress={() => console.log('teste component: ', Platform.OS)}
+                onPress={() => handleNavigationToGroupIten(item.id)}
+                
               
-            
+              />}
+
+              rightActionChidren={<ButtonGroupComponent/>}
             />
           )}
         />

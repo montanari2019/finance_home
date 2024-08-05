@@ -9,21 +9,28 @@ import { Pinch } from '~/components/Animeted/Pinch';
 import { ScrollView } from 'react-native-gesture-handler';
 import { PanGesture } from '~/components/Animeted/PanGesture';
 import { Fling } from '~/components/Animeted/Fling';
+import { ButtonSwipeable } from '~/components/Animeted/ButtonSwipeable';
 
 export function User() {
   return (
     <View style={styled.container}>
       <Paragraph text="User screen" fontWeight="700" textAlign="center" />
 
-      {/* <OnPressAnimated />
 
-        <LongPress />
 
-        <Rotation /> */}
 
-      {/* <Pinch /> */}
+     <View style={{alignItems: "center"}}>
 
-      <Fling />
+
+
+    
+      {/* <OnPressAnimated /> */}
+        {/* <LongPress /> */}
+          {/* <Rotation /> */}
+          {/* <Pinch /> */}
+     </View>
+
+      {/* <Fling /> */}
       {/* <PanGesture /> */}
     </View>
   );
