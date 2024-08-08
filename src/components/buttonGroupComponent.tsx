@@ -5,14 +5,15 @@ import { styled } from '~/styles/Components/buttonGroupComponent.styles';
 
 export function ButtonGroupComponent() {
   return (
-    <>
-      <TouchableOpacity style={styled.update} onPress={() => alert('Alterar')}>
-        <MaterialIcons name="mode-edit-outline" size={24} color={THEME.COLORS.WHITE} />
-      </TouchableOpacity>
+    <View style={styled.contianer}>
       <TouchableOpacity style={styled.delete} onPress={() => alert('Deletar')}>
         <MaterialIcons name="delete" size={24} color={THEME.COLORS.WHITE} />
       </TouchableOpacity>
-    </>
+
+      <TouchableOpacity style={styled.update} onPress={() => alert('Alterar')}>
+        <MaterialIcons name="mode-edit-outline" size={24} color={THEME.COLORS.WHITE} />
+      </TouchableOpacity>
+    </View>
   );
 }
 

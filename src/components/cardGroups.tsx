@@ -15,7 +15,7 @@ export function CardGroupComponent({ group, ...resto }: CardGroupModel) {
   const hasMoreUsers = group.users.length > 2;
 
   return (
-    <RectButton {...resto} style={styled.containerShadow}>
+    <RectButton {...resto}>
       <LinearGradient
         colors={group.saldo > 0 ? colorSuccess : colorDanger}
         start={{ x: 0, y: 0 }}

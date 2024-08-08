@@ -4,6 +4,7 @@ import { THEME } from "~/theme/global";
 export const styled = StyleSheet.create({
     contianer: {
       height: 160,
+      flexDirection: "row"
     },
   
     delete: {

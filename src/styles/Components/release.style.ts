@@ -6,7 +6,8 @@ export const styled = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 16,
-    // backgroundColor: THEME.COLORS.GRAY_200
+    height: 60,
+    backgroundColor: THEME.COLORS.GRAY_10
   },
 
   icon: {

@@ -5,6 +5,8 @@ import { releases } from '~/utils/obects';
 import { THEME } from '~/theme/global';
 import { PickerSelectMesMovimento } from './pickerSelectMesMovimento';
 import { styled } from '~/styles/Components/listRelease.style';
+import { ButtonSwipeable } from './Animeted/ButtonSwipeable';
+import { ButtonReleaseComponent } from './buttonReleaseComponent';
 
 export function ListRelease() {
   return (
@@ -33,13 +35,18 @@ export function ListRelease() {
         contentContainerStyle={{ gap: 20, paddingBottom: 15 }}
         showsVerticalScrollIndicator={false}
         renderItem={({ item, index }) => (
-          <Release
-            date_release={item.date_release}
-            recurrent={item.recurrent}
-            title={item.title}
-            type={item.type}
-            value={item.value}
+          <ButtonSwipeable
             key={item.value + index}
+            rightActionChidren={<ButtonReleaseComponent />}
+            children={
+              <Release
+                date_release={item.date_release}
+                recurrent={item.recurrent}
+                title={item.title}
+                type={item.type}
+                value={item.value}
+              />
+            }
           />
         )}
       />

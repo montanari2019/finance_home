@@ -7,11 +7,11 @@ export const styled = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: THEME.COLORS.WHITE,
+    backgroundColor: THEME.COLORS.GRAY_10,
   },
 
   containerMain: {
-    marginHorizontal: 16,
+    paddingHorizontal: 16,
     flex: 1,
   },
 
