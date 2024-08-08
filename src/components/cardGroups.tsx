@@ -1,17 +1,17 @@
 import { LinearGradient } from 'expo-linear-gradient';
-import { Platform, ScrollView,  View } from 'react-native';
+import { View } from 'react-native';
+import { RectButton } from 'react-native-gesture-handler';
+import { CardGroupModel } from '~/model/cardGroupItem.model';
 import { styled } from '~/styles/Components/cardGroups.styles';
 import { THEME } from '~/theme/global';
+import { formatDateDefault, formatterReais } from '~/utils/format';
 import { Paragraph } from './paragraph';
-import { formatDateDefault, formatDateMonthAndYear, formatterReais } from '~/utils/format';
-import { CardGroupModel } from '~/model/cardGroupItem.model';
-import { TouchableOpacity, RectButton  } from 'react-native-gesture-handler';
 
 export function CardGroupComponent({ group, ...resto }: CardGroupModel) {
   const colorDanger = [THEME.COLORS.DANGER_500, THEME.COLORS.DANGER_900];
   const colorSuccess = [THEME.COLORS.GREEN_500, THEME.COLORS.GREEN_900];
 
-  const usersToDisplay = group.users.slice(0, 2); // Pegue os primeiros 2 usuários
+  const usersToDisplay = group.users.slice(0, 2); 
   const hasMoreUsers = group.users.length > 2;
 
   return (

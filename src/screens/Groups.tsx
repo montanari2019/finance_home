@@ -52,17 +52,6 @@ export function Groups() {
         </View>
 
   
-          {/* <View style={styled.containerCards}>
-            {groups.map((index) => {
-              return (
-                <CardGroupComponent
-                  group={index}
-                  key={String(index.id + index.saldo + new Date(index.date_crate).getTime())}
-                />
-              );
-            })}
-          </View> */}
-
 
 
         <FlatList 
@@ -82,7 +71,6 @@ export function Groups() {
               children={<CardGroupComponent 
                 group={item}
                 key={String(item.id)}
-                // onPress={() => console.log('teste component: ', Platform.OS)}
                 onPress={() => handleNavigationToGroupIten(item.id)}
                 
               

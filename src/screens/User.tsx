@@ -30,7 +30,7 @@ export function User() {
           {/* <Pinch /> */}
      </View>
 
-      {/* <Fling /> */}
+      <Fling />
       {/* <PanGesture /> */}
     </View>
   );

@@ -11,6 +11,8 @@ import { Participants } from '~/dto/participantes.dto';
 import { MaterialIcons } from '@expo/vector-icons';
 import { Separator } from '~/components/separator';
 import { ListRelease } from '~/components/listRelease';
+import { SwipeBackGesture } from '~/components/swipeBackGesture';
+import { ROUTE_TYPES } from '~/routes/types.enum';
 
 type RoutesParamsProps = {
   id: string;
@@ -49,51 +51,46 @@ export function GroupItem() {
   );
 
   return (
-    <View style={{ flex: 1, backgroundColor: THEME.COLORS.GRAY_10 }}>
-      <Header />
+    <SwipeBackGesture fromWhere={ROUTE_TYPES.GROUPS}>
+      <View style={{ flex: 1, backgroundColor: THEME.COLORS.GRAY_10 }}>
+        <Header />
 
-      {/* <View>
-        <Paragraph text={`GROUP id: ${id}`} />
-      </View> */}
+        <View style={{ marginBottom: 16, marginTop: 32 }}>
+          <Separator />
+        </View>
 
-      <View style={{marginBottom: 16, marginTop: 32 }}>
-        <Separator/>
+        <View
+          style={{
+            flexDirection: 'row',
+            gap: 16,
+            alignItems: 'center',
+            marginLeft: 16,
+          }}>
+          <TouchableOpacity onPress={handleGoBack}>
+            <MaterialIcons name="arrow-back" size={24} color={THEME.COLORS.GREEN_500} />
+          </TouchableOpacity>
+
+          <FlatList
+            data={participantes}
+            showsHorizontalScrollIndicator={false}
+            horizontal
+            ListEmptyComponent={
+              <Paragraph
+                text="Não existe lançamentos"
+                textAlign="center"
+                fontSize={THEME.SIZES.SIZE_MD}
+              />
+            }
+            contentContainerStyle={{ gap: 5, paddingHorizontal: 16, paddingVertical: 16 }}
+            showsVerticalScrollIndicator={false}
+            renderItem={({ item }) => <ButtonParticipant title={item.name} />}
+          />
+        </View>
+
+        <View style={{ flex: 1, marginHorizontal: 16 }}>
+          <ListRelease />
+        </View>
       </View>
-
-      <View style={{
-        flexDirection: "row",
-        gap: 16,
-        alignItems: "center",
-        marginLeft: 16,
-      }}>
-
-        <TouchableOpacity onPress={handleGoBack}>
-          <MaterialIcons name="arrow-back" size={24} color={THEME.COLORS.GREEN_500} />
-        </TouchableOpacity>
-
-
-        <FlatList
-            // style={{ padding: 16, alignContent: 'center', }}
-          data={participantes}
-          showsHorizontalScrollIndicator={false}
-          horizontal
-          ListEmptyComponent={
-            <Paragraph
-              text="Não existe lançamentos"
-              textAlign="center"
-              fontSize={THEME.SIZES.SIZE_MD}
-            />
-          }
-          contentContainerStyle={{ gap: 5, paddingHorizontal: 16, paddingVertical: 16 }}
-          showsVerticalScrollIndicator={false}
-          renderItem={({ item }) => <ButtonParticipant title={item.name} />}
-          
-        />
-      </View>
-
-      <View style={{flex: 1, marginHorizontal: 16}}>
-        <ListRelease/>
-      </View>
-    </View>
+    </SwipeBackGesture>
   );
 }

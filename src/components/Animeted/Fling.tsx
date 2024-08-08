@@ -21,6 +21,7 @@ export function Fling() {
   .direction(Directions.RIGHT)
   .onStart((e)=>{
     positon.value = withTiming(LIMIT, {duration: 500})
+    console.log("direction")
   })
 
   const directionLeft = Gesture.Fling()

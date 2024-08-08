@@ -1,6 +1,7 @@
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { THEME } from '~/theme/global';
+import { styled } from '~/styles/Components/buttonGroupComponent.styles';
 
 export function ButtonGroupComponent() {
   return (
@@ -15,31 +16,4 @@ export function ButtonGroupComponent() {
   );
 }
 
-const styled = StyleSheet.create({
-  contianer: {
-    // width: "100%",
-    height: 160,
-  },
 
-  delete: {
-    width: 60,
-    height: 160,
-    // borderTopRightRadius: 10,
-    // borderBottomRightRadius: 10,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: THEME.COLORS.DANGER_500,
-    // elevation: 8,
-  },
-
-  update: {
-    width: 60,
-    height: 160,
-    borderTopRightRadius: 10,
-    borderBottomRightRadius: 10,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: THEME.COLORS.PURPLE_500,
-    // elevation: 8,
-  },
-});
