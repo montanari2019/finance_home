@@ -11,8 +11,8 @@ import { Participants } from '~/dto/participantes.dto';
 import { MaterialIcons } from '@expo/vector-icons';
 import { Separator } from '~/components/separator';
 import { ListRelease } from '~/components/listRelease';
-import { SwipeBackGesture } from '~/components/swipeBackGesture';
 import { ROUTE_TYPES } from '~/routes/types.enum';
+import { SwipeBackGesture } from '~/components/Animeted/SwipeBackGesture';
 
 type RoutesParamsProps = {
   id: string;
@@ -51,10 +51,10 @@ export function GroupItem() {
   );
 
   return (
-    <SwipeBackGesture fromWhere={ROUTE_TYPES.GROUPS}>
-      <View style={{ flex: 1, backgroundColor: THEME.COLORS.GRAY_10 }}>
-        <Header />
+    <View style={{ flex: 1, backgroundColor: THEME.COLORS.GRAY_10 }}>
+      <Header />
 
+      <SwipeBackGesture fromWhere={ROUTE_TYPES.GROUPS}>
         <View style={{ marginBottom: 16, marginTop: 32 }}>
           <Separator />
         </View>
@@ -90,7 +90,7 @@ export function GroupItem() {
         <View style={{ flex: 1, marginHorizontal: 16 }}>
           <ListRelease />
         </View>
-      </View>
-    </SwipeBackGesture>
+      </SwipeBackGesture>
+    </View>
   );
 }
